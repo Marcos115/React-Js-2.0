@@ -17,7 +17,7 @@ h1{
 } */
 
 body{
-    background-color: rgb(212, 223, 117);
+    background-color: rgb(46, 175, 207);
 }
 
 
@@ -39,7 +39,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    color: rgb(230, 14, 14);
+    color: white;
 }
 
 ul a{
@@ -62,5 +62,16 @@ ul a{
 }
 
 .sumaresta{
-    margin: 5px;
+    margin: 10px;
+}
+
+.cartas{
+    display: flex;
+    flex-direction: row;
+}
+
+.fotoheladera{
+    width: 10%;
+    height: 10%;
+
 }
