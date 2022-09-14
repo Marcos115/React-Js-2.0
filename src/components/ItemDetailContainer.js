@@ -1,6 +1,6 @@
 
 import {useEffect, useState} from 'react'
-import { getItem} from '../app/Item'
+import { getItem} from '../components/ItemListContainer'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
