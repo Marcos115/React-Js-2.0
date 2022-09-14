@@ -13,14 +13,6 @@ export const getProductos = () => {
                     precio: 920.000,
                     imagen: { fotoheladera },
                 },
-
-                // {
-                //     id: 2,
-                //     nombre: "Teclado",
-                //     precio: 7000,
-                //     stock: 5,
-                //     imagen: {teclado},
-                // }
             ])
         }, 2000)
     })
