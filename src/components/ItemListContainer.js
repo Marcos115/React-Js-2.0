@@ -26,25 +26,25 @@ import fotoaire from "../assets/aire.jpg"
 
 const producto1 = {
     id: 1,
-    title: "S",
+    title: "Heladera",
     price: 5000,
     imagen: { fotoheladera },
 }
 const producto2 = {
     id: 2,
-    title: "S",
+    title: "Horno",
     price: 5000,
     imagen: { fotohorno },
 }
 const producto3 = {
     id: 3,
-    title: "S",
+    title: "Microondas",
     price: 5000,
     imagen: { fotomicroondas },
 }
 const producto4 = {
     id: 4,
-    title: "S",
+    title: "Aire",
     price: 5000,
     imagen: { fotoaire },
 }
