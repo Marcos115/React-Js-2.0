@@ -1,83 +1,37 @@
-// import React from 'react'
-// import ItemList from './ItemList'
 
 
-// const ItemListContainer = () => {
-//     return (
-//         <div>
-//             <h1>Catálogo</h1>
-//             <div className = "sumaresta">
-//                 <ItemList/>
-//             </div>
-//         </div>
-//     )
-// }
 
-// export default ItemListContainer
-
-
-import { useState, useEffect } from "react"
-import ItemList from "./ItemList"
-import fotoheladera from "../assets/heladeralg.jpg"
-import fotohorno from "../assets/horno.jpg"
-import fotomicroondas from "../assets/microondas.jpg"
-import fotoaire from "../assets/aire.jpg"
-
-
-const producto1 = {
-    id: 1,
-    title: "Heladera",
-    price: 5000,
-    imagen: { fotoheladera },
-}
-const producto2 = {
-    id: 2,
-    title: "Horno",
-    price: 5000,
-    imagen: { fotohorno },
-}
-const producto3 = {
-    id: 3,
-    title: "Microondas",
-    price: 5000,
-    imagen: { fotomicroondas },
-}
-const producto4 = {
-    id: 4,
-    title: "Aire",
-    price: 5000,
-    imagen: { fotoaire },
-}
+import React from 'react'
+import { useState, useEffect } from 'react';
+import productos from "../productos"
+import ItemList from './ItemList';
 const ItemListContainer = () => {
-    const [setProducto, productos] = useState([])
+    const [items, setItem] = useState([])
     useEffect(() => {
-        new Promise((resolve, reject) => {
+        const task = new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(
-                    ItemListContainer.then(res => {
-                        setProducto({ productos })
-                    }))
-            }, 2000);
-            return (
-                <>
-                    <div>
-                        <ItemList productos={productos} />
-                    </div>
-                </>
-            )
-        })
-    }, [])
+                resolve(productos);
+            }, 2000)
+        });
+        task.then((res) => {
+            setItem(res)
+        });
+    }, []);
+    return (
+        <div><ItemList props={items} /></div>
+    )
 }
+
 
 export const getItem = () => new Promise ((resolve, reject) => {
     resolve(
         {
             id: 1,
-            nombre: "Mouse",
+            nombre: "Heladera",
             precio: "$5000",
             stock: 5,
             imagen: {},
-            descripcion: "Mouse marca RedDragon"
+            descripcion: "Heladera marca LG"
         }
     )})
 

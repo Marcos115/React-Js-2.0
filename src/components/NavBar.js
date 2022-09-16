@@ -1,31 +1,4 @@
-// import foto from "../assets/logo.png"
-// import CartWidget from "./CartWidget";
 
-
-// function NavBar() {
-//     return (
-//         <>
-//             <div className="nav">
-//                 <div className="logo">
-//                     <img src={foto} alt=""> </img>
-//                 </div>
-//                 <ul className="options">
-//                     <li className="inicio"><a href="#">HOME</a></li>
-//                     <li><a href="#">OFERTAS</a></li>
-//                     <li><a href="#">ABOUT US</a></li>
-//                     <li><a href="#">CONTACT</a></li>
-//                 </ul>
-//                 <div className="sumbit">Log in</div>
-//                 <CartWidget />
-//             </div>
-//             <div>
-//                 <h2> Las ofertas de la semana</h2>
-//             </div>
-//         </>
-//     )
-// }
-
-// export default NavBar;
 
 import foto from "../assets/logo.png"
 
