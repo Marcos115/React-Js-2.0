@@ -1,17 +1,23 @@
 
 
 import React from 'react'
-import Cuenta from "../components/ItemCount"
+import ItemCount from "../components/ItemCount"
 
 
 const Item = (props) => {
     return (
-        <div className='Card'>
-            <h4>{props.title}</h4>
-            <img src={props.image} className="foto" alt='Item' />
-            <p>Precio: ${props.price}</p>
-            <button className='btn btn-secondary'>Detalles del producto</button>
-            <Cuenta />
+        <div className="cartas">
+            <div className="container">
+                        <div className="card">
+                            <div className="card-body">
+                                <h4 className="card-title">{props.title}</h4>
+                                <img src = {props.image} className = "foto" alt = "Item"/>
+                                <p>Precio: ${props.price}</p>
+                                <button>Detalles del producto</button>
+                                <ItemCount onAdd={(contador) => console.log(contador)} />
+                            </div>
+                        </div>
+            </div>
         </div>
     )
 }

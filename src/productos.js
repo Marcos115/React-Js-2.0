@@ -8,25 +8,29 @@ const productos = () => [
     {
         id: 1,
         title: "Heladera LG",
-        price: 5500,
+        price: 500000,
+        stock: 15,
         image: fotoheladera,
     },
     {
         id: 2,
         title: "Horno ATMA",
-        price: 6200,
+        price: 200000,
+        stock: 15,
         image: fotohorno,
     },
     {
         id: 3,
         title: "Microondas",
-        price: 56600,
+        price: 120000,
+        stock: 15,
         image: fotomicroondas,
     },
     {
         id: 4,
         title: "Aire",
-        price: 9000,
+        price: 200000,
+        stock: 15,
         image: fotoaire,
     },
 ]

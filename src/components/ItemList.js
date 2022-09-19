@@ -1,17 +1,16 @@
 
+import React from 'react'
+import Item from "../app/Item"
 
-import React from 'react';
-import Item from '../app/Item';
-const ItemList = ({ props }) => {
+
+const ItemList = ({props}) => {
     return (
-        <div>
+        <div className='wrap'>
             {props.map((item) => {
-                return <Item key={item.id} image={item.image} title={item.title} price={item.price}
-                />
-            })
-            }
+                return <Item key = {item.id} image = {item.image} title = {item.title} price = {item.price}/>
+            })}
         </div>
-    )
-}
+    ) 
+} 
 
-export default ItemList;
+export default ItemList
