@@ -1,16 +1,15 @@
-import React from 'react'
-import NavBar from '../components/NavBar'
-import { Outlet } from 'react-router-dom'
-
+import { Outlet } from "react-router-dom"
+import NavBar from "../components/NavBar"
 const Layout = () => {
     return (
-        <div><h1>Layout</h1>
-        <NavBar />
-        <section>
-            <Outlet />
-        </section>
-        <footer>Soy el footer</footer>
-        </div>
+        <>
+            <div>
+                <NavBar />
+            </div>
+            <div>
+                <Outlet />
+            </div>
+        </>
     )
 }
 

@@ -4,35 +4,34 @@ import fotomicroondas from "./assets/microondas.jpg"
 import fotoaire from "./assets/aire.jpg"
 
 
-export const productos = () => [
+const productos = () => [
     {
         id: 1,
-        title: "Heladera LG",
-        price: 500000,
-        stock: 15,
+        title: "Cartuchera Amayra",
         image: fotoheladera,
+        price: 500000,
+        medidas: "190x60 cm.",
     },
     {
         id: 2,
-        title: "Horno ATMA",
-        price: 200000,
-        stock: 15,
+        title: "Bolsito Amayra",
         image: fotohorno,
+        price: 200000,
+        medidas: "80x90 cm."
     },
     {
         id: 3,
-        title: "Microondas",
-        price: 120000,
-        stock: 15,
+        title: "Set Valijas Wilson",
         image: fotomicroondas,
+        price: 100000,
+        medidas: "40x30 cm."
     },
     {
         id: 4,
-        title: "Aire",
+        title: "Valija Amayra",
+        image:fotoaire,
         price: 200000,
-        stock: 15,
-        image: fotoaire,
+        medidas: "80x90 cm."
     },
 ]
-
 export default productos

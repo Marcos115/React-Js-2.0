@@ -1,70 +1,32 @@
-// import React from 'react'
-// // import ItemCount from "./ItemCount"
-// import fotoheladera from "../assets/heladeralg.jpg"
-
-// const ItemDetail = ({ producto }) => {
-
-//     return (
-//         <div className="detailedInfo">
-//             <img src={fotoheladera} alt="foto" />
-//             <ul>
-//             <li className="itemTitle">{producto.title}</li>
-//             <li>{producto.price}</li>
-//             <li >{producto.stock}</li>
-//             <li className="descripcion">{producto.descripcion}</li>
-//             </ul>
-//         </div>
-//             )
-// }
-
-// // const ItemDetail = ({ item }) => {
-// //     return (
-// //         <>
-// //         <div className='detailedInfo'>
-// //             <div>
-// //                 <h2>Detalles</h2>
-// //                 <p className='itemTitle'>{item.nombre}</p>
-// //                 <img src={fotoheladera} alt=""/>
-// //                 <p className='descripcion'>{item.descripcion}</p>
-// //                 <ItemCount stock={item.stock}/>
-// //             </div>
-// //         </div>
-// //         </>
-// //     )
-// // }
 
 
 
+import React from 'react'
+import Cuenta from "./ItemCount"
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
-
-//  export default ItemDetail
-
-
-import React from "react"
-import ItemCount from "./ItemCount"
-import {Link} from "react-router-dom"
-import { useState } from "react"
-
-const ItemDetail = ( data ) => {
+const ItemDetail = (details) => {
     const [carrito, setCarrito] = useState(false)
-    const onAdd = (q) =>{
+    const onAdd = (q) => {
         setCarrito(true)
+        console.log(`Añadiste ${q} cantidades al carrito`)
     }
     return (
         <>
-            <div className='cardDetail'>
-                <h1><strong> {data.title}</strong></h1>
-                <img className='imgLego' src={data.image} alt={data.title} />
-                <h2>Precio: ${data.price}</h2>
-                <p className='description'>Descripción: {data.description}</p>
+            <div className='Card'>
+                <h4 className='card-tilte'>{details.title}</h4>
+                <img src={details.image} className="foto" alt='Item' />
+                <p>Precio: ${details.price}</p>
+                <p>Medidas: {details.medidas}</p>
                 {
                     carrito
-                    ?<Link to = "/cart/">Terminar compra</Link>
-                    :<ItemCount stock = {data.stock} onAdd = {onAdd} initial = {0}/>
+                        ? <Link to="/cart">Terminar compra</Link>
+                        : <Cuenta stock={5} onAdd={onAdd} />
                 }
             </div>
-            <Link to = {"/"}>
-                <button className = "btn btn-dark">
+            <Link to={`/`} >
+                <button className="btn btn-dark">
                     Volver
                 </button>
             </Link>
