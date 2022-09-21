@@ -4,7 +4,7 @@ import fotomicroondas from "./assets/microondas.jpg"
 import fotoaire from "./assets/aire.jpg"
 
 
-const productos = () => [
+export const productos = () => [
     {
         id: 1,
         title: "Heladera LG",
