@@ -7,31 +7,31 @@ import fotoaire from "./assets/aire.jpg"
 const productos = () => [
     {
         id: 1,
-        title: "Cartuchera Amayra",
+        title: "Heladera",
         image: fotoheladera,
         price: 500000,
-        medidas: "190x60 cm.",
+        stock: 50,
     },
     {
         id: 2,
-        title: "Bolsito Amayra",
+        title: "Horno",
         image: fotohorno,
         price: 200000,
-        medidas: "80x90 cm."
+        stock: 50,
     },
     {
         id: 3,
-        title: "Set Valijas Wilson",
+        title: "Microondas",
         image: fotomicroondas,
         price: 100000,
-        medidas: "40x30 cm."
+        stock: 50,
     },
     {
         id: 4,
-        title: "Valija Amayra",
+        title: "Aire",
         image:fotoaire,
         price: 200000,
-        medidas: "80x90 cm."
+        stock: 50,
     },
 ]
 export default productos
