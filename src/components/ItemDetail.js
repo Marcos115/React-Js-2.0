@@ -28,7 +28,8 @@ const ItemDetail = ({details}) => {
                 
             </Link>
             <div className="terminar">
-            <button className = "btn btn-dark" onClick = {() => agregarAlCarrito(data[0])}>Agregar al Carrito</button>
+                <Link to = {"/cart/"}><button className = "btn btn-dark" onClick = {() => agregarAlCarrito(data[0])}>Agregar al Carrito</button>
+                </Link>
             </div>
             </div>
             
