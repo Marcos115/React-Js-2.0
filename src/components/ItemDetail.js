@@ -1,36 +1,39 @@
+import React, { useContext } from "react"
+import ItemCount from "./ItemCount"
+import {Link} from "react-router-dom"
+import { useState } from "react"
+import { CartContext } from "./Carrito"
 
-
-
-import React from 'react'
-import Cuenta from "./ItemCount"
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
-
-const ItemDetail = (details) => {
-    const [carrito, setCarrito] = useState(false)
-    const onAdd = (q) => {
-        setCarrito(true)
-        console.log(`Añadiste ${q} cantidades al carrito`)
+const ItemDetail = ({details}) => {
+    const {agregarAlCarrito} = useContext(CartContext)
+    const [data, setData] = useState([])
+    const onAdd = (q) =>{
+        setData(q)
     }
     return (
         <>
-            <div className='Card'>
-                <h4 className='card-tilte'>{details.title}</h4>
-                <img src={details.image} className="foto" alt='Item' />
-                <p>Precio: ${details.price}</p>
-                <p>Medidas: {details.medidas}</p>
-                {
-                    carrito
-                        ? <Link to="/cart">Terminar compra</Link>
-                        : <Cuenta stock={5} onAdd={onAdd} />
-                }
+            <div className='cardDetail'>
+                <h1><strong> {details.title} </strong></h1>
+                <img className='imgLego' src={details.image} alt= "fto" />
+                <h2>Precio: ${details.price}</h2>
+                <p className='description'>Descripción: {details.description}</p>
+                <ItemCount stock = {25} onAdd = {onAdd}/>
             </div>
-            <Link to={`/`} >
-                <button className="btn btn-dark">
+            
+            <div className="botonDetail">
+            <Link to = {"/product/"}>
+                <button className = "btn btn-dark">
                     Volver
                 </button>
+                
             </Link>
+            <div className="terminar">
+            <button className = "btn btn-dark" onClick = {() => agregarAlCarrito(data[0])}>Agregar al Carrito</button>
+            </div>
+            </div>
+            
         </>
+        
     )
 }
 

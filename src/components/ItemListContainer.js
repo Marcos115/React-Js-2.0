@@ -1,6 +1,3 @@
-
-
-
 import React from 'react'
 import ItemList from './ItemList'
 import { useEffect, useState} from "react"
@@ -22,17 +19,5 @@ const ItemListContainer = () => {
         <div><ItemList props = {items}/></div>
     )
 }
-
-// export const getItem = () => new Promise ((resolve, reject) => {
-//     resolve(
-//         {
-//             id: 1,
-//             nombre: "Heladera",
-//             precio: "$500000",
-//             stock: 15,
-//             imagen: {},
-//             descripcion: "Heladera marca LG"
-//         }
-//     )})
 
 export default ItemListContainer

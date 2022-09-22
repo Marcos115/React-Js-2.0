@@ -6,18 +6,22 @@ import Contact from "../pages/Contact"
 import Product from "../pages/Product"
 import Cart from "../pages/Cart"
 import ItemDetailContainer from "../components/ItemDetailContainer"
+import React from "react"
+import { CartProvider } from "../components/Carrito"
 
 
 const Router = () => (
+    <CartProvider>
     <BrowserRouter>
         <Routes>
             <Route index element = {<Home/>} />
             <Route path = "/contact/" element = {<Contact/>} />
             <Route path = "/product/" element = {<Product/>} />
             <Route path = "/cart/" element = {<Cart/>}/>
-            <Route path = "/item/:id" element = {<ItemDetailContainer/>}/>
+            <Route path = "/item/:itemId" element = {<ItemDetailContainer/>}/>
         </Routes>
     </BrowserRouter>
+    </CartProvider>
 )
 
 export default Router

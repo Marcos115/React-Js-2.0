@@ -4,13 +4,14 @@ import fotomicroondas from "./assets/microondas.jpg"
 import fotoaire from "./assets/aire.jpg"
 
 
-const productos = () => [
+const productos = [
     {
         id: 1,
         title: "Heladera",
         image: fotoheladera,
         price: 500000,
         stock: 50,
+        description: "Heladera LG"
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const productos = () => [
         image: fotohorno,
         price: 200000,
         stock: 50,
+        description: "Horno ATMA"
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ const productos = () => [
         image: fotomicroondas,
         price: 100000,
         stock: 50,
+        description: "Microondas ATMA"
     },
     {
         id: 4,
@@ -32,6 +35,7 @@ const productos = () => [
         image:fotoaire,
         price: 200000,
         stock: 50,
+        description: "Aire LG"
     },
 ]
 export default productos
