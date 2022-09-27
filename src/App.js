@@ -36,6 +36,33 @@ const App = () => {
                 await deleteItem({ name: productoName})
                 getItems()
             }} >Borrar Producto</button> */}
+
+            
+            {/* const App = () => {
+    const [userName, setUserName] = useState()
+    const [items, setItems] = useState()
+    const [email, setUserEmail] = useState()
+    const [userPhone, setUserPhone] = useState()
+    useEffect(() => {
+        getItems().then(res => setItems(res))
+    }, [])
+    return (
+        <>
+            <input type="text" onChange={e => setUserName(e.target.value)} placeholder="nombre" />
+            <input type="email" onChange={e => setUserEmail(e.target.value)} placeholder="email" />
+            <input type="number" onChange={e => setUserPhone(e.target.value)} placeholder="Numero de teléfono" />
+            <button onClick={() => { createItem({ name: userName, email: email, phone: userPhone }) }}>Save Item</button>
+
+            <button onClick={() => {
+                deleteItem(email)
+            }}>Delete Item</button>
+            {
+                items && items.map(item => <p> {item.name} - {item.email} - {item.phone}</p>)
+            }
+
+        </>
+    )
+} */}
         </div>
 
     )

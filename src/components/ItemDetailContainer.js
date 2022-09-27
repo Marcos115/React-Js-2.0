@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import  productos  from '../productos'
-import NavBar from "./NavBar"
+import NavBar from "../components/NavBar"
 
 const ItemDetailContainer = () => {
 

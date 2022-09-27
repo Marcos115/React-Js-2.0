@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../components/Carrito'
+import { CartContext } from '../components/Cart/Carrito'
 import NavBar from '../components/NavBar'
 
 const Cart = () => {
@@ -17,3 +17,4 @@ const Cart = () => {
 }
 
 export default Cart
+

@@ -3,7 +3,6 @@
 import foto from "../assets/logo.png"
 
 import { Link } from "react-router-dom"
-
 const NavBar = () => {
     return (
         <div>
