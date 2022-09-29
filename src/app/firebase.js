@@ -1,17 +1,22 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth';
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_PROJECT_ID + '.firebaseapp.com',
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_PROJECT_ID + ".appspot.com",
+    apiKey: "AIzaSyA77jpAEPRlRoKYCLPaZDRFXM_dtcvIXIY",
+    authDomain: "react-56abc.firebaseapp.com",
+    projectId: "react-56abc",
+    storageBucket: "react-56abc.appspot.com",
+    messagingSenderId: "956796222178",
+    appId: "1:956796222178:web:2dcbf31d0dbae5c93d7cbb",
+    measurementId: "G-7H0KXR9EZK"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
-export const db = getFirestore();
-export const auth = getAuth(firebaseApp);
-
-// Si descomentas la siguiente línea, cuando mientras que el usuario no se desloguee expresamente o cierre el navegador, permanecerá logueado y podremos acceder a su id desde cualquier página
-setPersistence(auth, browserLocalPersistence);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);

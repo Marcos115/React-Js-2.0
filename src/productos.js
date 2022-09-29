@@ -10,7 +10,7 @@ const productos = [
         title: "Heladera",
         image: fotoheladera,
         price: 500000,
-        stock: 50,
+        stock: 5,
         description: "Heladera LG"
     },
     {
@@ -18,7 +18,7 @@ const productos = [
         title: "Horno",
         image: fotohorno,
         price: 200000,
-        stock: 50,
+        stock: 5,
         description: "Horno ATMA"
     },
     {
@@ -26,7 +26,7 @@ const productos = [
         title: "Microondas",
         image: fotomicroondas,
         price: 100000,
-        stock: 50,
+        stock: 5,
         description: "Microondas ATMA"
     },
     {
@@ -34,7 +34,7 @@ const productos = [
         title: "Aire",
         image:fotoaire,
         price: 200000,
-        stock: 50,
+        stock: 5,
         description: "Aire LG"
     },
 ]
