@@ -7,7 +7,6 @@ const B = () => {
     const [state, setState] = useContext(AppContext)
     return (
         <>
-        {/* <div>{state.a}</div> */}
         <div>{state.map(product => (
             <div>
                 Nombre: {product.title} - Precio: {product.price}
