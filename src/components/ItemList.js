@@ -6,7 +6,7 @@ const ItemList = ({props}) => {
     return (
         <div className='wrap'>
             {props.map((item, key) => {
-                return <Item key = {key} id = {item.id} image = {item.image} title = {item.title} price = {item.price} props = {item}/>
+                return <Item key = {item.id} image = {item.Image} title = {item.Title} price = {item.Price} props = {item}/>
             })}
         </div>
     ) 

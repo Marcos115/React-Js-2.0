@@ -24,7 +24,7 @@ const Cart = () => {
                         return(<li key = {index}>
                             <p>{item.title}</p>
                             <p>Cantidad: {item.quantity}</p>
-                            <img src = {item.image} alt = "ftos"/>
+                            <img src = {item.image} alt = "fotos"/>
                             <p>${item.quantity*item.price}</p>
                             <button onClick={() => deleteProduct(item.id)} className = "btn btn-dark">Eliminar del Carrito</button>
                         </li>

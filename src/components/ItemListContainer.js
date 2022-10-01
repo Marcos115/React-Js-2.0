@@ -4,15 +4,15 @@ import { useEffect, useState} from "react"
 import {getFirestore, collection, getDocs} from "firebase/firestore"
 
 const ItemListContainer = () => {
-    const [items, setItem] = useState([])
+    const [productos, setProductos] = useState([])
         useEffect(() => {
             const recuperarItem = getFirestore()
-            const recuperarCollection = collection (recuperarItem, "productos")
+            const recuperarCollection = collection (recuperarItem, "Items")
             getDocs(recuperarCollection)
-            .then(res => setItem(res.docs.map(producto => ({id: producto.id, ...producto.data()}))))
+            .then(res => setProductos(res.docs.map(producto => ({id: producto.id, ...producto.data()}))))
         }, [])
     return (
-        <div><ItemList props = {items}/></div>
+        <div><ItemList props = {productos}/></div>
     )
 }
 

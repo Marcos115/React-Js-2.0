@@ -6,12 +6,12 @@ import NavBar from "../components/NavBar"
 import { getFirestore, doc, getDoc } from "firebase/firestore"
 
 const ItemDetailContainer = () => {
-    const [details, setDetails] = useState({})
+    const [details, setDetails] = useState([])
     const {itemId} = useParams()
 
     useEffect(() =>{
         const recuperarItem = getFirestore()
-        const recuperarDoc = doc(recuperarItem, "productos", itemId)
+        const recuperarDoc = doc(recuperarItem, "Items", itemId)
         getDoc(recuperarDoc)
         .then(res => setDetails({id: res.id,...res.data()}))
     },[itemId])
