@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar'
 import { useCartContext } from '../components/Cart/CartContext'
 
 
+
 const Cart = () => {
     const {cart, deleteProduct, totalPrice, totalQty, cleanProduct} = useCartContext()
     return (
@@ -24,7 +25,7 @@ const Cart = () => {
                         return(<li key = {index}>
                             <p>{item.title}</p>
                             <p>Cantidad: {item.quantity}</p>
-                            <img src = {item.image} alt = "fotos"/>
+                            <img src = {item.image} alt = "ftos"/>
                             <p>${item.quantity*item.price}</p>
                             <button onClick={() => deleteProduct(item.id)} className = "btn btn-dark">Eliminar del Carrito</button>
                         </li>
@@ -34,7 +35,7 @@ const Cart = () => {
                 </div>
             ) : <></>}
 
-            <button onClick={() => cleanProduct()} className = "btn btn-dark">Limpiar Carrito</button>
+            <button onClick={() => cleanProduct(console.log("Compra Realizada"))} className = "btn btn-dark">Comprar</button>
             
         </div>
     )
