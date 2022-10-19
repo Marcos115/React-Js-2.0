@@ -40,7 +40,7 @@ const Home = () => {
     const guardarDatos = async(e) => {
         e.preventDefault()
         try {
-            await addDoc(collection(db, "Items"), {
+            await addDoc(collection(db, "orders"), {
                 ...user
             })
         } catch (error) {
