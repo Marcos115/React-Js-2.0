@@ -1,5 +1,4 @@
 
-import foto from "../assets/logo.png"
 import { Link } from "react-router-dom"
 
 const NavBar = () => {
@@ -7,7 +6,6 @@ const NavBar = () => {
         <div>
             <div>
             <h1 className = "bienvenidos">Electrodomésticos Amador</h1>
-            <img className ="logo" src={foto} alt="" />
             </div>
             <div className="Navbar">
                 <ul>
