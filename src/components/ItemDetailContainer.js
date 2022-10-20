@@ -4,14 +4,14 @@ import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import NavBar from "../components/NavBar"
 import { getFirestore, doc, getDoc } from "firebase/firestore"
+import {db} from "../app/firebase"
 
 const ItemDetailContainer = () => {
     const [details, setDetails] = useState([])
     const {itemId} = useParams()
 
     useEffect(() =>{
-        const recuperarItem = getFirestore()
-        const recuperarDoc = doc(recuperarItem, "Items", itemId)
+        const recuperarDoc = doc(db, "Items", itemId)
         getDoc(recuperarDoc)
         .then(res => setDetails({id: res.id,...res.data()}))
     },[itemId])
